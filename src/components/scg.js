@@ -12,8 +12,20 @@ import api from '../services/api';
 const MyButton = styled(Button)`
     font-size: 12px;
     margin-left: 10px;
-    background-color: #ee2524;
-    border-color: #ee2524;
+    background-color: #ee2524 !important;
+    border-color: #ee2524 !important;
+    outline: none !important;
+    &:active, &:focus {
+        box-shadow: 0 0 0 0.2rem #f36665;
+        outline: none !important;
+        outline-offset: none !important;
+        background-color: #f36665;
+    }
+    &:visited {box-shadow: 0 0 0 0.2rem #f36665;} /* visited link */
+    &:hover {
+        background-color: #f36665;
+        border-color: #f36665;
+  }
 `
 const MyCol = styled(Col)`
     display: flex;
@@ -121,7 +133,7 @@ class SCG extends Component {
                             onKeyDown={this.handleKeyDown}
                             onBlur={this.findNearby}
                         />
-                        <MyButton variant="primary" onClick={this.findNearby}>Search</MyButton>
+                        <MyButton variant="danger" onClick={this.findNearby}>Search</MyButton>
                     </MyCol>
                 </Row>
                 <Row>
