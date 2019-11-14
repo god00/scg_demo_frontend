@@ -1,4 +1,3 @@
 {
-    "prod": "https://line-scg-demo.herokuapp.com",
-    "dev": "http://localhost:65521"
+    "prod": "https://line-scg-demo.herokuapp.com"
 }

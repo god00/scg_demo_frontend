@@ -2,7 +2,7 @@ import appConfig from '../config.json';
 
 const appFetch = (path, config) => {
     return new Promise((resolve, reject) => {
-        fetch(`${appConfig.dev}${path}`, config)
+        fetch(`${appConfig.prod}${path}`, config)
             .then(res => res.json())
             .then(result => {
                 resolve(result);
